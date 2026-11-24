@@ -1,0 +1,349 @@
+{
+  "schemaVersion": "token-radar-dossier/1 (reimplementation, not the official kit)",
+  "bounty": "token-radar-01",
+  "title": "Token Launch Radar — tokenless protocols ranked by implied launch value",
+  "entrant": "jack-4 (Jack)",
+  "generatedFrom": {
+    "snapshotSource": "https://api.llama.fi/protocols (public DefiLlama API)",
+    "snapshotFetchedAt": "2026-11-24",
+    "snapshotProtocols": 9100
+  },
+  "watchlist": {
+    "definition": "Tokenless protocols in the snapshot (no symbol, no contract address, no CoinGecko id, no market cap) with TVL >= $1M, excluding categories whose product is itself a tradable token (liquid staking/restaking, staking pools, bridges, wrapped assets), centralised exchanges, front-ends and chains, and excluding names that are themselves a traded asset; version rows merged into one family row.",
+    "rows": 342,
+    "exclusions": [
+      {
+        "rule": "protocol already has a token (symbol, contract address, CoinGecko id or market cap present)",
+        "removed": 4708
+      },
+      {
+        "rule": "TVL below $1M (no meaningful capital to farm)",
+        "removed": 3842
+      },
+      {
+        "rule": "category is a wrapped/staked product, a centralised exchange, a front-end, a bridge or a chain itself",
+        "removed": 189
+      },
+      {
+        "rule": "name is itself a traded asset (stablecoin or wrapped token)",
+        "removed": 7
+      },
+      {
+        "rule": "version/variant rows merged into one family row",
+        "removed": 12
+      }
+    ]
+  },
+  "methodology": "Implied FDV = TVL x median market-cap/TVL of tokenised peers in the same category (global median where a category has fewer than 3 peers), winsorised to [0.02, 5], capped at $5B; curator/allocator TVL haircut 0.25x for double-counting. Likelihood (5%-95%) scores log TVL size, 7-day TVL growth, audits, multi-chain presence, age >= 1 year and category token-launch precedent. Implied value = implied FDV x likelihood; board sorted by implied value descending. Market cap is circulating market cap, a conservative stand-in for fully diluted value.",
+  "rankingFormula": "impliedValueUsd = min(TVL * curatorHaircut * peerMultiple, 5e9) * likelihood",
+  "peerMultiples": {
+    "AI Agents": {
+      "median": 0.6337880018606225,
+      "n": 2
+    },
+    "Basis Trading": {
+      "median": 0.5837995491953445,
+      "n": 7
+    },
+    "Bridge": {
+      "median": 1.2071717345796444,
+      "n": 8
+    },
+    "CDP": {
+      "median": 0.166993721941714,
+      "n": 9
+    },
+    "CEX": {
+      "median": 0.1381622774407517,
+      "n": 11
+    },
+    "Canonical Bridge": {
+      "median": 0.8864442040737487,
+      "n": 13
+    },
+    "Chain": {
+      "median": 2.9939630570594566,
+      "n": 1
+    },
+    "Collateral Management": {
+      "median": 5,
+      "n": 1
+    },
+    "Cross Chain Bridge": {
+      "median": 1.3629790698929767,
+      "n": 6
+    },
+    "DEX Aggregator": {
+      "median": 5,
+      "n": 1
+    },
+    "DOR": {
+      "median": 0.09969228154853754,
+      "n": 1
+    },
+    "Decentralized AI": {
+      "median": 2.0526272542494444,
+      "n": 1
+    },
+    "Decentralized BTC": {
+      "median": 2.7648720346160465,
+      "n": 1
+    },
+    "Derivatives": {
+      "median": 1.3958874761152646,
+      "n": 8
+    },
+    "Dexs": {
+      "median": 0.3796281841674248,
+      "n": 25
+    },
+    "Dual-Token Stablecoin": {
+      "median": 0.06571278309603429,
+      "n": 1
+    },
+    "Farm": {
+      "median": 5,
+      "n": 1
+    },
+    "Indexes": {
+      "median": 0.15446609220093294,
+      "n": 3
+    },
+    "Launchpad": {
+      "median": 2.4924239464772886,
+      "n": 3
+    },
+    "Lending": {
+      "median": 0.13373366392978928,
+      "n": 21
+    },
+    "Leveraged Farming": {
+      "median": 0.11894160463278085,
+      "n": 2
+    },
+    "Liquid Restaking": {
+      "median": 0.04878767720230154,
+      "n": 3
+    },
+    "Liquid Staking": {
+      "median": 0.053301201647271514,
+      "n": 12
+    },
+    "Liquidity Manager": {
+      "median": 0.02,
+      "n": 3
+    },
+    "NFT Marketplace": {
+      "median": 2.8319607572870966,
+      "n": 2
+    },
+    "Onchain Capital Allocator": {
+      "median": 0.07465452211870664,
+      "n": 4
+    },
+    "Options": {
+      "median": 2.135903209237587,
+      "n": 2
+    },
+    "Payments": {
+      "median": 0.1769199165211071,
+      "n": 2
+    },
+    "Prediction Market": {
+      "median": 2.052184243512934,
+      "n": 3
+    },
+    "Privacy": {
+      "median": 0.9420216010994091,
+      "n": 3
+    },
+    "RWA": {
+      "median": 0.33425081688822467,
+      "n": 10
+    },
+    "Restaking": {
+      "median": 0.023442495635368692,
+      "n": 2
+    },
+    "Risk Curators": {
+      "median": 3.2082378430429346,
+      "n": 1
+    },
+    "Stablecoin Wrapper": {
+      "median": 0.9940352852271988,
+      "n": 1
+    },
+    "Staking Pool": {
+      "median": 0.02,
+      "n": 2
+    },
+    "Token Locker": {
+      "median": 2.5337602265414643,
+      "n": 2
+    },
+    "Uncollateralized Lending": {
+      "median": 1.3232537328753498,
+      "n": 1
+    },
+    "Yield Aggregator": {
+      "median": 0.06430085971852523,
+      "n": 6
+    },
+    "Yield": {
+      "median": 0.15099139976027132,
+      "n": 18
+    }
+  },
+  "board": {
+    "rows": 342,
+    "totalTvlUsd": 15501730722,
+    "totalImpliedValueUsd": 2086048850,
+    "topImpliedValueUsd": 494433009,
+    "medianImpliedValueUsd": 669059,
+    "verdictCounts": {
+      "Top farm": 2,
+      "Worth farming": 13,
+      "Speculative": 45,
+      "Watch only": 282
+    },
+    "top10": [
+      {
+        "rank": 1,
+        "name": "Polymarket International",
+        "category": "Prediction Market",
+        "chain": "Polygon",
+        "tvlUsd": 314328207,
+        "impliedValueUsd": 494433009,
+        "likelihood": 0.766
+      },
+      {
+        "rank": 2,
+        "name": "RocketSwap Anubis V2",
+        "category": "Dexs",
+        "chain": "Anubis",
+        "tvlUsd": 397325860,
+        "impliedValueUsd": 101554391,
+        "likelihood": 0.673
+      },
+      {
+        "rank": 3,
+        "name": "Sentora Curator",
+        "category": "Risk Curators",
+        "chain": "Multi-Chain",
+        "tvlUsd": 2648185637,
+        "impliedValueUsd": 93339594,
+        "likelihood": 0.55
+      },
+      {
+        "rank": 4,
+        "name": "BitFi Basis",
+        "category": "Basis Trading",
+        "chain": "Multi-Chain",
+        "tvlUsd": 212908421,
+        "impliedValueUsd": 87655025,
+        "likelihood": 0.705
+      },
+      {
+        "rank": 5,
+        "name": "Extended Perps",
+        "category": "Derivatives",
+        "chain": "Multi-Chain",
+        "tvlUsd": 90666033,
+        "impliedValueUsd": 86123327,
+        "likelihood": 0.68
+      },
+      {
+        "rank": 6,
+        "name": "OnRe",
+        "category": "RWA",
+        "chain": "Solana",
+        "tvlUsd": 289806596,
+        "impliedValueUsd": 74020837,
+        "likelihood": 0.764
+      },
+      {
+        "rank": 7,
+        "name": "Gauntlet",
+        "category": "Risk Curators",
+        "chain": "Multi-Chain",
+        "tvlUsd": 1578132392,
+        "impliedValueUsd": 60680546,
+        "likelihood": 0.6
+      },
+      {
+        "rank": 8,
+        "name": "AZverse Perps",
+        "category": "Derivatives",
+        "chain": "Multi-Chain",
+        "tvlUsd": 52038485,
+        "impliedValueUsd": 48263501,
+        "likelihood": 0.664
+      },
+      {
+        "rank": 9,
+        "name": "Arcus Perps",
+        "category": "Derivatives",
+        "chain": "Robinhood Chain",
+        "tvlUsd": 56953878,
+        "impliedValueUsd": 45079956,
+        "likelihood": 0.567
+      },
+      {
+        "rank": 10,
+        "name": "Tydro",
+        "category": "Lending",
+        "chain": "Ink",
+        "tvlUsd": 401969828,
+        "impliedValueUsd": 41587030,
+        "likelihood": 0.774
+      }
+    ]
+  },
+  "farmPlan": {
+    "stepsPerRow": 6,
+    "minStepChars": 98,
+    "maxStepChars": 216
+  },
+  "dashboard": {
+    "files": 1,
+    "bytes": 542801,
+    "fileList": [
+      {
+        "path": "dashboard/index.html",
+        "bytes": 542801
+      }
+    ]
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/01-board.png",
+      "bytes": 209857,
+      "sha256": "eeb8690273e5935b5c9cfaa418da6d8ac9f0b076a3083924dbe8578513759cd8"
+    },
+    {
+      "path": "screenshots/02-detail.png",
+      "bytes": 271560,
+      "sha256": "fa962e8417ba8b74fc0dfd42abd81ec28e42f20b32953b3e6914a3775d8e0674"
+    },
+    {
+      "path": "screenshots/03-filtered.png",
+      "bytes": 201723,
+      "sha256": "bdef4406ff68c80163afd3dd1e2eefa2786c3fee218f7f397b314e379ba46772"
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "issues": []
+  },
+  "limitations": [
+    "Sealed kit snapshot and official vendor/makefun-board.ts were not obtainable without make.fun/skill.md, which failed a security check and was not used; this build uses the live public DefiLlama snapshot of 2026-11-24 and a from-scratch reimplementation of buildDossier. Re-run the official kit before submitting.",
+    "DefiLlama TVL misses products with no on-chain TVL (wallets, social apps, marketplaces); their launches may be large but cannot be anchored to a TVL number here.",
+    "Prediction markets and similar businesses are systematically undervalued by a TVL multiple: their TVL is collateral, not business value.",
+    "Market cap is circulating market cap, not fully diluted value, so implied FDVs are conservative.",
+    "Screenshots were taken with the local headless Chromium and committed with the entry; main.ts verifies their presence and hashes them into dossier.json but does not take screenshots itself (no browser in a plain Node run).",
+    "A few snapshot rows look like data-quality outliers (for example a large TVL on the obscure Anubis chain, and listing dates in the future); they are kept as reported rather than deleted, since there is no objective rule to exclude them.",
+    "No protocol on this board has announced a token; implied value is an estimate, not a promise of an airdrop."
+  ],
+  "reproducibility": "node main.ts (Node 22.18+, no dependencies, no network). Reads data/snapshot.json, writes board.json, dashboard/index.html and dossier.json. Outputs are deterministic given the same snapshot: no wall-clock timestamps are used; the as-of date is the snapshot date. Screenshots: scripts/screenshot.sh with the headless Chromium in the animation toolchain.",
+  "reimplementationNotice": "vendor/makefun-board.ts in this repo is a from-scratch reimplementation. The official kit file was not obtainable without make.fun/skill.md, which failed a security check and was not used. Re-run the official kit's buildDossier before submitting."
+}
