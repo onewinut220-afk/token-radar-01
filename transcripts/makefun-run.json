@@ -1,0 +1,13 @@
+{
+  "bounty": "token-radar-01",
+  "title": "Build the best token launch radar",
+  "entrant": "Jack",
+  "username": "@jack-4",
+  "wallet": "F8aX5M93DXuJodpxBDyAzA6yvdkXMwQd7K6YVMY3rq8u",
+  "date": "2026-11-24",
+  "repo": "https://github.com/onewinut220-afk/token-radar-01",
+  "program": "main.ts",
+  "board_rows": 342,
+  "transcripts": ["transcripts/BUILD_LOG.md"],
+  "notes": "Local build only. Official kit was not obtainable without skill.md (not downloaded/installed/run); vendor/makefun-board.ts is a from-scratch reimplementation of the published interface, and the snapshot is live DefiLlama public data from 2026-11-24, not the sealed snapshot. See README.md and transcripts/BUILD_LOG.md for full methodology and limitations."
+}
